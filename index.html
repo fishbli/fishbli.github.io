@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>Species Lifelist</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Georgia, serif;
             background-color: #f5f5f5;
             padding: 20px;
         }
@@ -28,28 +28,52 @@
             color: #333;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+        .intro-box {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #333;
+            text-align: left;
+            line-height: 1.6;
+            color: #555;
         }
 
-        .gallery-column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .intro-box p {
+            margin-bottom: 15px;
+        }
+
+        .intro-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .family-section {
+            margin-bottom: 50px;
+        }
+
+        .family-header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        .species-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            row-gap: 10px;
         }
 
         .gallery-item {
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
             line-height: 0;
         }
 
         .gallery-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .gallery-item a {
@@ -63,14 +87,35 @@
             display: block;
         }
 
+        .gallery-item .caption {
+            padding: 4px 8px;
+            font-size: 14px;
+            line-height: 1.3;
+            color: #333;
+            background-color: #f5f5f5;
+            font-family: Georgia, serif;
+        }
+
+        .gallery-item .caption strong {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 1px;
+        }
+
+        .gallery-item .caption em {
+            display: block;
+            font-style: italic;
+            font-size: 13px;
+        }
+
         @media (max-width: 1024px) {
-            .gallery {
+            .species-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 640px) {
-            .gallery {
+            .species-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -78,103 +123,186 @@
 </head>
 <body>
     <div class="container">
-        <h1>Image Gallery</h1>
+        <h1>Species Lifelist</h1>
 
-        <div class="gallery">
-            <!-- Column 1 -->
-            <div class="gallery-column">
+        <div class="intro-box">
+            <p>Welcome to my species lifelist gallery. This collection represents years of exploration and documentation of diverse aquatic species from around the world. Each photograph captures the unique beauty and characteristics of these remarkable creatures in their natural habitats.</p>
+            <p>This ongoing project aims to document and celebrate the incredible biodiversity found in our waters. From vibrant tropical fish to elusive deep-sea specimens, every species tells a story of adaptation and survival in their respective ecosystems.</p>
+        </div>
+
+        <!-- Family 1 -->
+        <div class="family-section">
+            <h2 class="family-header">Family Name 1</h2>
+            <div class="species-grid">
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53987095067/">
                         <img src="https://live.staticflickr.com/65535/53987095067_bdbcc2a0f2_z.jpg" alt="Fish 1">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53987095092/">
                         <img src="https://live.staticflickr.com/65535/53987095092_289460af29_z.jpg" alt="Fish 2">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53987095157/">
                         <img src="https://live.staticflickr.com/65535/53987095157_3d5e1ea666_z.jpg" alt="Fish 3">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53987992451/">
                         <img src="https://live.staticflickr.com/65535/53987992451_511433d9e9_z.jpg" alt="Fish 4">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="gallery-column">
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53987992481/">
                         <img src="https://live.staticflickr.com/65535/53987992481_8a54300308_z.jpg" alt="Fish 5">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
+                <!-- 3 empty spots will naturally appear here on the right -->
+            </div>
+        </div>
+
+        <!-- Family 2 -->
+        <div class="family-section">
+            <h2 class="family-header">Family Name 2</h2>
+            <div class="species-grid">
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53987992731/">
                         <img src="https://live.staticflickr.com/65535/53987992731_9babd7975d_z.jpg" alt="Fish 6">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53987992836/">
                         <img src="https://live.staticflickr.com/65535/53987992836_4319fb3bdd_z.jpg" alt="Fish 7">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53987992851/">
                         <img src="https://live.staticflickr.com/65535/53987992851_5b489444df_z.jpg" alt="Fish 8">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="gallery-column">
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53988226758/">
                         <img src="https://live.staticflickr.com/65535/53988226758_fc4887f873_z.jpg" alt="Fish 9">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
+                <!-- Perfect fit - no empty spots -->
+            </div>
+        </div>
+
+        <!-- Family 3 -->
+        <div class="family-section">
+            <h2 class="family-header">Family Name 3</h2>
+            <div class="species-grid">
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53988226888/">
                         <img src="https://live.staticflickr.com/65535/53988226888_13c0e9ccac_z.jpg" alt="Fish 10">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53988306519/">
                         <img src="https://live.staticflickr.com/65535/53988306519_f5cdfdc6b6_z.jpg" alt="Fish 11">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53988421920/">
                         <img src="https://live.staticflickr.com/65535/53988421920_a7637da1cd_z.jpg" alt="Fish 12">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Column 4 -->
-            <div class="gallery-column">
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53988422050/">
                         <img src="https://live.staticflickr.com/65535/53988422050_7edafc7c13_z.jpg" alt="Fish 13">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53988422070/">
                         <img src="https://live.staticflickr.com/65535/53988422070_902511cca1_z.jpg" alt="Fish 14">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/53988422330/">
                         <img src="https://live.staticflickr.com/65535/53988422330_2de8ea1b54_z.jpg" alt="Fish 15">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
+                <!-- 2 empty spots will naturally appear here on the right -->
+            </div>
+        </div>
+
+        <!-- Family 4 -->
+        <div class="family-section">
+            <h2 class="family-header">Family Name 4</h2>
+            <div class="species-grid">
                 <div class="gallery-item">
                     <a data-flickr-embed="true" href="https://www.flickr.com/photos/163626445@N08/54082056361/">
                         <img src="https://live.staticflickr.com/65535/54082056361_da449e1e2b_z.jpg" alt="Fish 16">
                     </a>
+                    <div class="caption">
+                        <strong>Species Name</strong>
+                        <em>Scientific name</em>
+                    </div>
                 </div>
+                <!-- 3 empty spots will naturally appear here on the right -->
             </div>
         </div>
     </div>
