@@ -30,7 +30,7 @@
         }
 
         .intro-box {
-            background-color: white;
+            background-color: #e8e8e8;
             padding: 25px;
             margin-bottom: 30px;
             border-left: 4px solid #333;
@@ -51,7 +51,7 @@
             flex: 1;
             text-align: left;
             line-height: 1.6;
-            color: #555;
+            color: #222;
         }
 
         .intro-box p {
@@ -60,6 +60,28 @@
 
         .intro-box p:last-child {
             margin-bottom: 0;
+        }
+
+        .ticker-box {
+            flex-shrink: 0;
+            background-color: #d8d8d8;
+            padding: 20px;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .ticker-box .number {
+            font-size: 64px;
+            font-weight: bold;
+            color: #555;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .ticker-box .text {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.4;
         }
 
         .family-section {
@@ -143,6 +165,10 @@
             .intro-box .text-content {
                 text-align: center;
             }
+
+            .ticker-box {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -155,6 +181,10 @@
             <div class="text-content">
                 <p>Welcome to my species lifelist gallery. This collection represents years of exploration and documentation of diverse aquatic species from around the world. Each photograph captures the unique beauty and characteristics of these remarkable creatures in their natural habitats.</p>
                 <p>This ongoing project aims to document and celebrate the incredible biodiversity found in our waters. From vibrant tropical fish to elusive deep-sea specimens, every species tells a story of adaptation and survival in their respective ecosystems.</p>
+            </div>
+            <div class="ticker-box">
+                <div class="number">777</div>
+                <div class="text">species caught on hook and line</div>
             </div>
         </div>
 
