@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Species Lifelist</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         * {
             margin: 0;
@@ -33,6 +34,21 @@
             padding: 25px;
             margin-bottom: 30px;
             border-left: 4px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .intro-box .headshot {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .intro-box .text-content {
+            flex: 1;
             text-align: left;
             line-height: 1.6;
             color: #555;
@@ -118,6 +134,15 @@
             .species-grid {
                 grid-template-columns: 1fr;
             }
+
+            .intro-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .intro-box .text-content {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -126,8 +151,11 @@
         <h1>Species Lifelist</h1>
 
         <div class="intro-box">
-            <p>Welcome to my species lifelist gallery. This collection represents years of exploration and documentation of diverse aquatic species from around the world. Each photograph captures the unique beauty and characteristics of these remarkable creatures in their natural habitats.</p>
-            <p>This ongoing project aims to document and celebrate the incredible biodiversity found in our waters. From vibrant tropical fish to elusive deep-sea specimens, every species tells a story of adaptation and survival in their respective ecosystems.</p>
+            <img src="images/headshot.jpg" alt="Headshot" class="headshot">
+            <div class="text-content">
+                <p>Welcome to my species lifelist gallery. This collection represents years of exploration and documentation of diverse aquatic species from around the world. Each photograph captures the unique beauty and characteristics of these remarkable creatures in their natural habitats.</p>
+                <p>This ongoing project aims to document and celebrate the incredible biodiversity found in our waters. From vibrant tropical fish to elusive deep-sea specimens, every species tells a story of adaptation and survival in their respective ecosystems.</p>
+            </div>
         </div>
 
         <!-- Family 1 -->
